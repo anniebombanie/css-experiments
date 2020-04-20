@@ -11,9 +11,12 @@ body {
   height: 100%;
 }
 
+.flex {
+  display: flex;
+}
+
 .container {
   &__outer {
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -21,11 +24,11 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate( -50%, -50% );
 
     &::before{
       content: '';
-      clip-path: polygon(0 0, 100% 0, 100% 20%, 0 90%);
+      clip-path: polygon( 0 0, 100% 0, 100% 20%, 0 90% );
       background-color: #feb65e;
       display: block;
       position: absolute;
@@ -37,8 +40,12 @@ body {
     }
   }
 
+  &__art {
+    justify-content: center;
+    align-items: flex-start;
+  }
+
   &__popsicle {
-    display: flex;
     flex-direction: column;
     align-items: center;
 
@@ -46,7 +53,6 @@ body {
       width: 240px;
       height: 350px;
       background-color: $color-popsicle;
-      display: flex;
       flex-direction: column;
       justify-content: space-around;
       border-radius: 115px 115px 30px 30px;
@@ -65,7 +71,6 @@ body {
     }
 
     .face {
-      display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
@@ -73,7 +78,6 @@ body {
     }
 
     .eyes {
-      display: flex;
       justify-content: space-between;
       width: 160px;
     }
@@ -111,7 +115,6 @@ body {
     }
 
     .cheeks {
-      display: flex;
       justify-content: space-between;
       width: 210px;
     }
@@ -150,13 +153,12 @@ body {
     margin-top: 40px;
     width: 120px;
     height: 120px;
-    display: flex;
     justify-content: center;
     align-items: center;
 
     &:before {
-      transform: skewX( -40deg );
       content: '';
+      transform: skewX( -40deg );
       position: absolute;
       top: 70%;
       left: 0;

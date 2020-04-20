@@ -5,10 +5,13 @@ body {
   height: 100%;
 }
 
-.container__outer {
+.flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.container__outer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -38,10 +41,16 @@ body {
   z-index: -10;
 }
 
+.container__art {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 .container__popsicle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -55,9 +64,6 @@ body {
   width: 240px;
   height: 350px;
   background-color: #f982bf;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -81,9 +87,6 @@ body {
 }
 
 .container__popsicle .face {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -98,9 +101,6 @@ body {
 }
 
 .container__popsicle .eyes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -139,9 +139,6 @@ body {
 }
 
 .container__popsicle .cheeks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -181,9 +178,6 @@ body {
   margin-top: 40px;
   width: 120px;
   height: 120px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -193,9 +187,9 @@ body {
 }
 
 .container__bubble:before {
+  content: '';
   -webkit-transform: skewX(-40deg);
           transform: skewX(-40deg);
-  content: '';
   position: absolute;
   top: 70%;
   left: 0;
