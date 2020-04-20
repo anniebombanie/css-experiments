@@ -2,29 +2,34 @@ $color-popsicle-light: #ff98cc;
 $color-popsicle: #f982bf;
 $color-popsicle-dark: #ff2995;
 $color-body-bg: #f0e576;
+$color-white: #fff;
 
 body {
   background-color: $color-body-bg;
-
-  &:before{
-    content: '';
-    display: block;
-    width: 110%;
-    height: 100%;
-    background-color: #feb65e;
-    position: absolute;
-    z-index: -10;
-    margin-top: 20px;
-    margin-left: -140px;
-    top: -333px;
-    transform: rotate(-18deg);
-  }
+  overflow: hidden;
+  margin: 0;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  margin-top: 6%;
+  &__outer {
+    display: flex;
+    justify-content: center;
+    // margin-top: 6%;
+    position: relative;
+
+    &::before{
+      content: '';
+      clip-path: polygon(0 0, 100% 0, 100% 20%, 0 90%);
+      background-color: #feb65e;
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: -10;
+    }
+  }
 
   &__popsicle {
     display: flex;
@@ -45,7 +50,7 @@ body {
     .glare {
       width: 35px;
       height: 70px;
-      background-color: #ff98cc;
+      background-color: $color-popsicle-light;
       position: relative;
       left: 170px;
       bottom: 20px;
@@ -80,7 +85,7 @@ body {
         content: '';
         display: block;
         position: absolute;
-        background-color: #fff;
+        background-color: $color-white;
         border-radius: 50%;
       }
 
@@ -133,7 +138,7 @@ body {
 
   &__bubble {
     position: relative;
-    background-color: #fff;
+    background-color: $color-white;
     border-radius: 50%;
     margin-left: 40px;
     margin-top: 40px;
@@ -151,7 +156,7 @@ body {
       left: 0;
       border-width: 30px 60px 0 0;
       border-style: solid;
-      border-color: #fff transparent;
+      border-color: $color-white transparent;
     }
 
     .heart {
