@@ -1,7 +1,10 @@
-$color-glare: #ff98cc;
+$color-popsicle-light: #ff98cc;
+$color-popsicle: #f982bf;
+$color-popsicle-dark: #ff2995;
+$color-body-bg: #f0e576;
 
 body {
-  background-color: #f0e576;
+  background-color: $color-body-bg;
 
   &:before{
     content: '';
@@ -31,12 +34,12 @@ body {
     .popsicle {
       width: 240px;
       height: 350px;
-      background-color: #f982bf;
+      background-color: $color-popsicle;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       border-radius: 115px 115px 30px 30px;
-      border-top: 8px solid $color-glare;
+      border-top: 8px solid $color-popsicle-light;
     }
 
     .glare {
@@ -67,10 +70,10 @@ body {
     .eye {
       width: 28px;
       height: 28px;
-      background: #ff2995;
+      background: $color-popsicle-dark;
       border-radius: 50%;
       position: relative;
-      border-bottom: 2px solid $color-glare;
+      border-bottom: 2px solid $color-popsicle-light;
 
       &::before,
       &::after {
@@ -106,7 +109,7 @@ body {
       width: 32px;
       height: 16px;
       margin-top: 3px;
-      background: $color-glare;
+      background: $color-popsicle-light;
       border-radius: 14px;
       position: relative;
     }
@@ -114,9 +117,9 @@ body {
     .mouth {
       width: 75px;
       height: 25px;
-      background-color: #ff2995;
+      background-color: $color-popsicle-dark;
       border-radius: 10px 10px 40px 40px;
-      border-bottom: 2px solid $color-glare;
+      border-bottom: 2px solid $color-popsicle-light;
     }
 
     .stick {
@@ -152,7 +155,7 @@ body {
     }
 
     .heart {
-      background-color: #ff2995;
+      background-color: $color-popsicle-dark;
       height: 30px;
       width: 30px;
       transform: rotate( -45deg );
@@ -162,7 +165,7 @@ body {
       &::before,
       &::after {
         content: '';
-        background-color: #ff2995;
+        background-color: $color-popsicle-dark;
         border-radius: 50%;
         position: absolute;
         height: 30px;
