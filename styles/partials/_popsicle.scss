@@ -1,11 +1,14 @@
 $color-popsicle-light: #ff98cc;
 $color-popsicle: #f982bf;
 $color-popsicle-dark: #ff2995;
-$color-body-bg: #f0e576;
+$color-body-btm: #f0e576;
+$color-body-top: #feb65e;
 $color-white: #fff;
+$color-stick: #ecaa7d;
+$color-stick-dark: #db9e74;
 
 body {
-  background-color: $color-body-bg;
+  background-color: $color-body-btm;
   overflow: hidden;
   margin: 0;
   height: 100%;
@@ -29,7 +32,7 @@ body {
     &::before{
       content: '';
       clip-path: polygon( 0 0, 100% 0, 100% 20%, 0 90% );
-      background-color: #feb65e;
+      background-color: $color-body-top;
       display: block;
       position: absolute;
       height: 100%;
@@ -139,8 +142,8 @@ body {
     .stick {
       width: 60px;
       height: 72px;
-      border-top: 12px solid #db9e74;
-      background-color: #ecaa7d;
+      border-top: 12px solid $color-stick-dark;
+      background-color: $color-stick;
       border-radius: 0 0 26px 26px;
     }
   }
